@@ -126,6 +126,8 @@
 <meta name="twitter:description" content="本文作者：驿马西方 出处： http://lesline.github.io/本文基于 知识共享署名-相同方式共享 4.0 国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名驿马西方及链接。">
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="驿马西方" type="application/atom+xml" />
 
@@ -394,6 +396,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -682,6 +687,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'uBmzUalK2PlpfScA7lBNdpQq-gzGzoHsz',
+        appKey: 'ynitA1QOEgvjNaEE0FSGdOFg',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
