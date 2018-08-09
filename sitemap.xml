@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/08/09/git-branch/</loc>
+    
+    <lastmod>2018-08-09T01:13:05.691Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/29/hello-world/</loc>
+    
+    <lastmod>2018-08-09T01:12:08.505Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/30/bear/</loc>
+    
+    <lastmod>2018-08-09T01:11:42.868Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/30/first-blog/</loc>
+    
+    <lastmod>2018-08-09T01:11:27.836Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/08/09/hexo-plug/</loc>
+    
+    <lastmod>2018-08-09T00:25:54.910Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2018-07-31T14:43:46.482Z</lastmod>
@@ -16,30 +51,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/30/first-blog/</loc>
-    
-    <lastmod>2018-07-31T14:24:34.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/07/29/hello-world/</loc>
-    
-    <lastmod>2018-07-31T14:15:26.043Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2018-07-31T01:19:45.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/07/30/bear/</loc>
-    
-    <lastmod>2018-07-29T18:02:21.014Z</lastmod>
     
   </url>
   
