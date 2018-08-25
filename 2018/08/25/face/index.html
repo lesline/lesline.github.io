@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="年前换工作，进行了面试，准备面试的过程学习到了一些东西，在此整理出来，供大家参考。">
+<meta name="keywords" content="master">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试整理">
+<meta property="og:url" content="http://yoursite.com/2018/08/25/face/index.html">
+<meta property="og:site_name" content="驿马西方">
+<meta property="og:description" content="年前换工作，进行了面试，准备面试的过程学习到了一些东西，在此整理出来，供大家参考。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-25T15:07:29.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试整理">
+<meta name="twitter:description" content="年前换工作，进行了面试，准备面试的过程学习到了一些东西，在此整理出来，供大家参考。">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="驿马西方" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/25/face/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>面试整理 | 驿马西方</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">驿马西方</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/25/face/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lesline">
+      <meta itemprop="description" content="开拓者">
+      <meta itemprop="image" content="/images/head.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="驿马西方">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面试整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-25 23:05:14 / 修改时间：23:07:29" itemprop="dateCreated datePublished" datetime="2018-08-25T23:05:14+08:00">2018-08-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/25/face/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/25/face/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>年前换工作，进行了面试，准备面试的过程学习到了一些东西，在此整理出来，供大家参考。<br><a id="more"></a></p>
+<h2 id="一：算法问题"><a href="#一：算法问题" class="headerlink" title="一：算法问题"></a>一：算法问题</h2><h3 id="1：各排序及时间复杂度（必问）"><a href="#1：各排序及时间复杂度（必问）" class="headerlink" title="1：各排序及时间复杂度（必问）"></a>1：各排序及时间复杂度（必问）</h3><hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">冒泡排序</th>
+<th style="text-align:center">合并排序</th>
+<th style="text-align:right">快速排序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">最坏时间复杂度</td>
+<td style="text-align:left">n2</td>
+<td style="text-align:center">nlog(n)</td>
+<td style="text-align:right">n2</td>
+</tr>
+<tr>
+<td style="text-align:left">最好时间复杂度</td>
+<td style="text-align:left">n2/n</td>
+<td style="text-align:center">nlog(n)</td>
+<td style="text-align:right">nlog(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">平均时间复杂度</td>
+<td style="text-align:left">n2</td>
+<td style="text-align:center">nlog(n)</td>
+<td style="text-align:right">nlog(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">最坏空间复杂度</td>
+<td style="text-align:left">1</td>
+<td style="text-align:center">n</td>
+<td style="text-align:right">log(n)</td>
+</tr>
+</tbody>
+</table>
+<p>上面表格中，为了便于输入，n2表示n的2次方<br>有些公司（美团、小米）会让写代码，一般能写出快排就行了。</p>
+<h2 id="Big-O-Algorithm-Complexity-Cheat-Sheet-Know-Thy-Complexities-ericdrowell"><a href="#Big-O-Algorithm-Complexity-Cheat-Sheet-Know-Thy-Complexities-ericdrowell" class="headerlink" title="Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!) @ericdrowell"></a><a href="http://bigocheatsheet.com" target="_blank" rel="noopener">Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!) @ericdrowell</a></h2><p>代码如下：<br><a href="https://www.jianshu.com/p/7e3c7f3086b1" target="_blank" rel="noopener">冒泡排序 - 简书</a><br><a href="https://www.jianshu.com/p/4ea663346c25" target="_blank" rel="noopener">快速排序 - 简书</a><br><a href="https://www.jianshu.com/p/73c337206bad" target="_blank" rel="noopener">归并排序 - 简书</a></p>
+<h3 id="2：链表反转（有些公司会让手写）"><a href="#2：链表反转（有些公司会让手写）" class="headerlink" title="2：链表反转（有些公司会让手写）"></a>2：链表反转（有些公司会让手写）</h3><p><a href="https://www.cnblogs.com/byrhuangqiang/p/4311336.html" target="_blank" rel="noopener">单链表反转总结篇 - BYRHuangQiang - 博客园</a></p>
+<h3 id="3：动态规划"><a href="#3：动态规划" class="headerlink" title="3：动态规划"></a>3：动态规划</h3><p>动态规划问题有很多，这里只讨论两个问题：</p>
+<ol>
+<li>取子数组的最大和</li>
+<li>01背包问题<br><a href="https://www.jianshu.com/p/ef4f5995d363" target="_blank" rel="noopener">动太规划 - 简书</a><br>其它算法参考<br><a href="http://blog.csdn.net/changyuanchn/article/details/51476281" target="_blank" rel="noopener">五大常用算法总结 - changyuanchn的专栏 - CSDN博客</a><h3 id="3：树结构（了解即可）"><a href="#3：树结构（了解即可）" class="headerlink" title="3：树结构（了解即可）"></a>3：树结构（了解即可）</h3><a href="https://www.jianshu.com/p/fbfdcb15c1f2" target="_blank" rel="noopener">树结构 - 简书</a><h3 id="3：Paxos算法（加分项）"><a href="#3：Paxos算法（加分项）" class="headerlink" title="3：Paxos算法（加分项）"></a>3：Paxos算法（加分项）</h3>本人总结在<a href="https://www.jianshu.com/p/634cac6479e8" target="_blank" rel="noopener">系统一致性 - 简书</a>中的『 2.3 分布式数据一致性的研究现状 』一章，由于paxos相对较为复杂，可参考论文及其它网上资源<br><a href="https://www.jianshu.com/p/06a477a576bf" target="_blank" rel="noopener">Paxos 算法浅析 - 简书</a><br><a href="http://www.cnblogs.com/mindwind/p/5231986.html" target="_blank" rel="noopener">Raft 为什么是更易理解的分布式一致性算法 - mindwind - 博客园</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;mid=403582309&amp;idx=1&amp;sn=80c006f4e84a8af35dc8e9654f018ace&amp;scene=1&amp;srcid=0119gtt2MOru0Jz4DHA3Rzqy&amp;key=710a5d99946419d927f6d5cd845dc9a72ff3d652a8e66f0ddf87d91262fd262f61f63660690d2d5da76a44a29e155610&amp;ascene=0&amp;uin=MjA1MDk3Njk1&amp;devicetype=iMac+MacBookPro11%2C4+OSX+OSX+10.11.1+build(15B42" target="_blank" rel="noopener">架构师需要了解的Paxos原理、历程及实战</a>&amp;version=11020201&amp;pass_ticket=bhstP11nRHvorVXvQ4pt9fzB9Vdzj5sSRBe84783gsg%3D)</li>
+</ol>
+<h2 id="二：JAVA基础"><a href="#二：JAVA基础" class="headerlink" title="二：JAVA基础"></a>二：JAVA基础</h2><h3 id="1：String-类的intern方法"><a href="#1：String-类的intern方法" class="headerlink" title="1：String 类的intern方法"></a>1：String 类的intern方法</h3><p><a href="https://tech.meituan.com/in_depth_understanding_string_intern.html" target="_blank" rel="noopener">深入解析String#intern -</a></p>
+<h3 id="2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）"><a href="#2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）" class="headerlink" title="2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）"></a>2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）</h3><p><a href="https://www.jianshu.com/p/1861130943e1" target="_blank" rel="noopener">HashMap实现原理 - 简书</a><br>参考：<br><a href="https://coolshell.cn/articles/9606.html" target="_blank" rel="noopener">疫苗：Java HashMap的死循环 | | 酷 壳 - CoolShell</a><br><a href="http://blog.csdn.net/a407625470/article/details/71080008" target="_blank" rel="noopener">HashMap多线程死循环问题 - CSDN博客</a><br>注意：HashMap 、ConcurrentHashMap 是看源码最好的入门，有数组、链表、红黑树，最好通读下源码。</p>
+<h3 id="3：java自带的的分析问题工具"><a href="#3：java自带的的分析问题工具" class="headerlink" title="3：java自带的的分析问题工具"></a>3：java自带的的分析问题工具</h3><p>jmap<br>jvisualvm<br>jconsole<br>Jstack简单使用，定位死循环、线程阻塞、死锁等问题<br><a href="https://jingyan.baidu.com/article/4f34706e3ec075e387b56df2.html" target="_blank" rel="noopener">高手是怎么使用jstack精确找到异常代码的_百度经验</a><br><a href="http://ginobefunny.com/post/deep_in_jvm_notes_part3/" target="_blank" rel="noopener">《深入理解Java虚拟机》读书笔记3：虚拟机性能监控与调优实战 | GinoBeFunny</a></p>
+<h3 id="4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题"><a href="#4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题" class="headerlink" title="4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题"></a>4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题</h3><ol>
+<li>jvm设置:-XX:+HeapDumpOnOutOfMemoryError —宕机时dump生成的.hprof文件</li>
+<li>用工具分析:内存分析工具MAT(Memory Analyzer Tool)、IBM HeapAnalyzer<h3 id="5：jdk1-8新特性"><a href="#5：jdk1-8新特性" class="headerlink" title="5：jdk1.8新特性"></a>5：jdk1.8新特性</h3><a href="http://blog.didispace.com/books/java8-tutorial/ch1.html" target="_blank" rel="noopener">Java 8 简明教程 · Java 8简明教程</a><h3 id="6-内存结构和垃圾回收算法及垃圾回收器适用场景"><a href="#6-内存结构和垃圾回收算法及垃圾回收器适用场景" class="headerlink" title="6.内存结构和垃圾回收算法及垃圾回收器适用场景"></a>6.内存结构和垃圾回收算法及垃圾回收器适用场景</h3><a href="https://www.jianshu.com/p/a8f1c506ec81" target="_blank" rel="noopener">jvm总结 - 简书</a><h3 id="7：多线程问题"><a href="#7：多线程问题" class="headerlink" title="7：多线程问题"></a>7：多线程问题</h3>多线程的问题范围比较多，这里列出常面试的两点：<h5 id="1、线程池原理及怎么设置更合理"><a href="#1、线程池原理及怎么设置更合理" class="headerlink" title="1、线程池原理及怎么设置更合理"></a>1、线程池原理及怎么设置更合理</h5><strong>线程池的两个参数解释</strong><br>（<strong>注意：maximumPoolSize是在队列满时才会以此为最大数创建新线程</strong>）：<br><strong>corePoolSize</strong>：线程池中的核心线程数，当提交一个任务时，线程池创建一个新线程执行任务，直到当前线程数等于corePoolSize；如果当前线程数为corePoolSize，继续提交的任务被保存到阻塞队列中，等待被执行；如果执行了线程池的prestartAllCoreThreads()方法，线程池会提前创建并启动所有核心线程。<br><strong>maximumPoolSize</strong>：线程池中允许的最大线程数。如果当前阻塞队列满了，且继续提交任务，则创建新的线程执行任务，前提是当前线程数小于maximumPoolSize。<br><strong>设置线程池大小</strong><br>设置线程池大小要考虑是cpu密集型还是io密集型，精细化设置的话还要考虑：线程等待时间、线程CPU时间。<br><a href="http://blog.csdn.net/u011519624/article/details/69263460" target="_blank" rel="noopener">如何合理设置线程池大小 - CSDN博客</a></li>
+</ol>
+<h5 id="2、关键字及工多线程工具类"><a href="#2、关键字及工多线程工具类" class="headerlink" title="2、关键字及工多线程工具类"></a>2、关键字及工多线程工具类</h5><p>ThreadLocal：<a href="http://mp.weixin.qq.com/s/5gkK_dwDPAOrtHYSLsQzUA" target="_blank" rel="noopener">Java面试必问，ThreadLocal终极篇</a><br>volatile:<a href="https://www.jianshu.com/p/506c1e38a922" target="_blank" rel="noopener">面试必问的volatile，你了解多少？ - 简书</a><br>CountDownLatch/CyclicBarrier/Semaphore</p>
+<h3 id="8：NIO-AIO问题"><a href="#8：NIO-AIO问题" class="headerlink" title="8：NIO AIO问题"></a>8：NIO AIO问题</h3><p>实际工作中很少直接使用NIO，面试时问NIO很多情况下会引入netty，netty除了网上相关资料（推荐「占小狼的博客」），可以看『netty权威指南』和『netty实战』</p>
+<h2 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h2><h3 id="Ioc-aop原理"><a href="#Ioc-aop原理" class="headerlink" title="Ioc aop原理"></a>Ioc aop原理</h3><p>待整理</p>
+<h3 id="拦截器是怎么实现"><a href="#拦截器是怎么实现" class="headerlink" title="拦截器是怎么实现"></a>拦截器是怎么实现</h3><p>待整理</p>
+<h3 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h3><p>网上很多</p>
+<h2 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h2><h3 id="Mybatis与-与-区别（容易记反）"><a href="#Mybatis与-与-区别（容易记反）" class="headerlink" title="Mybatis与$与#区别（容易记反）"></a>Mybatis与$与#区别（容易记反）</h3><p><a href="https://www.cnblogs.com/dato/p/7027949.html" target="_blank" rel="noopener">浅谈 Mybatis中的 ${ } 和 #{ }的区别 - 大头就是我 - 博客园</a></p>
+<h2 id="中间件应用"><a href="#中间件应用" class="headerlink" title="中间件应用"></a>中间件应用</h2><h3 id="1：分库分表"><a href="#1：分库分表" class="headerlink" title="1：分库分表"></a>1：分库分表</h3><p>如何分库分表及sharding-jdbc分库分表后如何实现分页：<br><a href="https://www.jianshu.com/p/ee42aba04a64" target="_blank" rel="noopener">sharding-jdbc 按时间分库分表 - 简书</a></p>
+<h3 id="2：dubbo原理和热部署"><a href="#2：dubbo原理和热部署" class="headerlink" title="2：dubbo原理和热部署"></a>2：dubbo原理和热部署</h3><p>参考dubbo官网<br><a href="http://dubbo.io/" target="_blank" rel="noopener">Overview | DUBBO</a></p>
+<h3 id="3：zookeeper选举算法及分布式锁实现"><a href="#3：zookeeper选举算法及分布式锁实现" class="headerlink" title="3：zookeeper选举算法及分布式锁实现"></a>3：zookeeper选举算法及分布式锁实现</h3><p>参考在<a href="https://www.jianshu.com/p/634cac6479e8" target="_blank" rel="noopener">系统一致性 - 简书</a>中的『 2.3.2 Paxos实践应用-&gt;ZAB协议-&gt;选主阶段（Leader election）』一章<br>排它锁：建临时节点<br>同享锁：建临时顺序节点（具体可参考&lt;从paxos到zookeeper&gt;一书）</p>
+<h3 id="4：redis数据结构及分布式锁的实现方式"><a href="#4：redis数据结构及分布式锁的实现方式" class="headerlink" title="4：redis数据结构及分布式锁的实现方式"></a>4：redis数据结构及分布式锁的实现方式</h3><p><a href="https://www.jianshu.com/p/da41fe072d11" target="_blank" rel="noopener">redis分布式锁实现 - 简书</a><br><strong>单机实现：</strong><br>通过set命令加NX/PX参数实现加锁<br>jedis.set(lockKey, requestId, “NX”, “PX”, expireTime);<br>requestId：可为UUID，删除时使用<br>通过del命令解锁：<br>String script = “if redis.call(‘get’, KEYS[1]) == ARGV[1] then return redis.call(‘del’, KEYS[1]) else return 0 end”;<br>Lua脚本调用保证命令的原子性<br>通过判断requestId（可为UUID），是否为本线程，防止其它线程误删。<br><strong>集群实现：</strong><br>Redlock算法：类似paxos算法，拥有N个Redis master节点的集群，只有超过半数的结点获取锁成功后，认为锁成功。<br><a href="https://redis.io/topics/distlock" target="_blank" rel="noopener">Distributed locks with Redis – Redis</a><br><a href="http://ifeve.com/redis-lock/" target="_blank" rel="noopener">《Redis官方文档》用Redis构建分布式锁 | 并发编程网 – ifeve.com</a></p>
+<h3 id="5：mq如何保证不丢失消息"><a href="#5：mq如何保证不丢失消息" class="headerlink" title="5：mq如何保证不丢失消息"></a>5：mq如何保证不丢失消息</h3><p>mq信息要固化到硬盘或数据库<br>可参考<a href="https://www.jianshu.com/p/634cac6479e8" target="_blank" rel="noopener">系统一致性 - 简书</a>中的『 2.2.5事件驱动模式 』一章</p>
+<h3 id="6：更新缓存与db同步"><a href="#6：更新缓存与db同步" class="headerlink" title="6：更新缓存与db同步"></a>6：更新缓存与db同步</h3><p>缓存与db属于不同的两个系统，我们知道绝对的数据一致性是不可以的，重点是如何保证最终的一致性，而不影响使用<br>缓存和db的读写先后问题网上有很多讨论，实际应用中各种方式都有，可以确定的原则有两点：<br>1、为了防止空值信息每次都击穿缓存到数据库，增加NullObject(空对象）：如果一个查询在缓存中没有，在数据库中也没有，这样每次都会对击穿数据库进行查询，造成DB负载过大<br>2、尽量设置过期时间，缓存资源有限，防止无效数据一直占用资源。当然也看到有些特例，有些场景面要让数据一直在缓存中，可能通过定时任务，在缓存失效前重置失效时间。</p>
+<h3 id="7：Redis与Memcached区别："><a href="#7：Redis与Memcached区别：" class="headerlink" title="7：Redis与Memcached区别："></a>7：Redis与Memcached区别：</h3><p>1: Memcached 只支持key/value；Redis支持五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。</p>
+<blockquote>
+<p>redis 哈希（散列）： 相当于hashmap<br>eg:HSET key field value(HSET car price 500)<br>redis 列表： 相当于 对队queue<br>eg:LPUSH key value(LPUSH numbers 1)<br>redis 集合： 相当于set<br>eg:SADD key member (SADD letters a)<br>redis 有序集合：相当于sorted set:加入分数，通过散列表和跳跃表实现<br>eg:zadd key score member(ZADD scordboard 89 tom)</p>
+</blockquote>
+<p>2: 在Redis中，并不是所有的数据都一直存储在内存中的，Memcached是。<br>3：redis可以定期保存到磁盘（持久化），Memcached不能。<br>4：Memcached是多线程，非阻塞IO复用的网络模型，Redis使用单线程的IO复用模型。<br>还有其它区别，具体搜索网上资料</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离"><a href="#mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离" class="headerlink" title="mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离"></a>mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离</h3><p><a href="https://www.jianshu.com/p/844fa04ee031" target="_blank" rel="noopener">数据库隔离级别 - 简书</a></p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>sql优化、索引、组合索引相关</p>
+<h2 id="前端："><a href="#前端：" class="headerlink" title="前端："></a>前端：</h2><p>一般做后端的前端都较弱，所有在面试官在问前端知识时，你可以回答解题的思路，具体函数名、参数什么的网上搜索相关开发手册就行。</p>
+<h3 id="js闭包"><a href="#js闭包" class="headerlink" title="js闭包"></a>js闭包</h3><p>这里特别提下闭包，毕竟这点跟java有很大区别<br><a href="https://kb.cnblogs.com/page/110782/" target="_blank" rel="noopener">Javascript闭包——懂不懂由你，反正我是懂了<em>知识库</em>博客园</a><br><a href="https://www.cnblogs.com/ywqbj/p/5822644.html" target="_blank" rel="noopener">Java8闭包 - yanweiqi - 博客园</a><br><a href="http://blog.csdn.net/yztbydh/article/details/76270708" target="_blank" rel="noopener">闭包(Java中的闭包) - CSDN博客</a></p>
+<h2 id="开放性问题："><a href="#开放性问题：" class="headerlink" title="开放性问题："></a>开放性问题：</h2><h3 id="1、看了哪些书"><a href="#1、看了哪些书" class="headerlink" title="1、看了哪些书"></a>1、看了哪些书</h3><h3 id="2、遇到哪些难题，怎么解决的"><a href="#2、遇到哪些难题，怎么解决的" class="headerlink" title="2、遇到哪些难题，怎么解决的"></a>2、遇到哪些难题，怎么解决的</h3><h3 id="3、哪方面你最擅长，讲一下-你有什么优势"><a href="#3、哪方面你最擅长，讲一下-你有什么优势" class="headerlink" title="3、哪方面你最擅长，讲一下/你有什么优势"></a>3、哪方面你最擅长，讲一下/你有什么优势</h3><p>这些问题较为开放，面试次数多了就有经验了，不过尽量还是提前组织一下语言。</p>
+<h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h2><h3 id="推荐书籍："><a href="#推荐书籍：" class="headerlink" title="推荐书籍："></a>推荐书籍：</h3><ol>
+<li>java并发编程实战（重理论）</li>
+<li>java并发编程的艺术（重使用）</li>
+<li>spring源码深度解析</li>
+<li>Spring实战(Spring Boot实战）</li>
+<li>重构</li>
+<li>代码整洁之道<br>还有其它书籍，但这几本看时最为舒畅，本人以为好的书满足两个条件：一是问题讲清楚，二是用最简单的方式进行讲述。这几本满足这两个条件。<h3 id="网站及博客"><a href="#网站及博客" class="headerlink" title="网站及博客"></a>网站及博客</h3>推荐一个网站、一个博客，特别是占小狼的博客，里面即有技术的总结，还有一些方法的推荐，有空尽量都过一遍：<br><a href="https://tech.meituan.com/" target="_blank" rel="noopener">https://tech.meituan.com/</a><br><a href="https://www.jianshu.com/u/90ab66c248e6" target="_blank" rel="noopener">占小狼 - 简书</a></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/25/hexo/" rel="next" title="博客搭建">
+                <i class="fa fa-chevron-left"></i> 博客搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/25/java8-lambda/" rel="prev" title="java8-lambda">
+                java8-lambda <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpeg"
+                alt="lesline" />
+            
+              <p class="site-author-name" itemprop="name">lesline</p>
+              <p class="site-description motion-element" itemprop="description">开拓者</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/lesline" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.jianshu.com/u/57308903b5ff" target="_blank" title="简书"><i class="fa fa-fw fa-globe"></i>简书</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一：算法问题"><span class="nav-number">1.</span> <span class="nav-text">一：算法问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：各排序及时间复杂度（必问）"><span class="nav-number">1.1.</span> <span class="nav-text">1：各排序及时间复杂度（必问）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Big-O-Algorithm-Complexity-Cheat-Sheet-Know-Thy-Complexities-ericdrowell"><span class="nav-number">2.</span> <span class="nav-text">Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!) @ericdrowell</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2：链表反转（有些公司会让手写）"><span class="nav-number">2.1.</span> <span class="nav-text">2：链表反转（有些公司会让手写）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：动态规划"><span class="nav-number">2.2.</span> <span class="nav-text">3：动态规划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：树结构（了解即可）"><span class="nav-number">2.3.</span> <span class="nav-text">3：树结构（了解即可）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：Paxos算法（加分项）"><span class="nav-number">2.4.</span> <span class="nav-text">3：Paxos算法（加分项）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二：JAVA基础"><span class="nav-number">3.</span> <span class="nav-text">二：JAVA基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：String-类的intern方法"><span class="nav-number">3.1.</span> <span class="nav-text">1：String 类的intern方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）"><span class="nav-number">3.2.</span> <span class="nav-text">2：Hashmap为什么线程不安全，及put过程，扩容过程，死循环产生的过程（必问）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：java自带的的分析问题工具"><span class="nav-number">3.3.</span> <span class="nav-text">3：java自带的的分析问题工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题"><span class="nav-number">3.4.</span> <span class="nav-text">4：如果系统宕机，可以通过分析jvm中的内存对象，查找问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5：jdk1-8新特性"><span class="nav-number">3.5.</span> <span class="nav-text">5：jdk1.8新特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-内存结构和垃圾回收算法及垃圾回收器适用场景"><span class="nav-number">3.6.</span> <span class="nav-text">6.内存结构和垃圾回收算法及垃圾回收器适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7：多线程问题"><span class="nav-number">3.7.</span> <span class="nav-text">7：多线程问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、线程池原理及怎么设置更合理"><span class="nav-number">3.7.0.1.</span> <span class="nav-text">1、线程池原理及怎么设置更合理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、关键字及工多线程工具类"><span class="nav-number">3.7.0.2.</span> <span class="nav-text">2、关键字及工多线程工具类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8：NIO-AIO问题"><span class="nav-number">3.8.</span> <span class="nav-text">8：NIO AIO问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring"><span class="nav-number">4.</span> <span class="nav-text">spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ioc-aop原理"><span class="nav-number">4.1.</span> <span class="nav-text">Ioc aop原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截器是怎么实现"><span class="nav-number">4.2.</span> <span class="nav-text">拦截器是怎么实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring事务传播机制"><span class="nav-number">4.3.</span> <span class="nav-text">Spring事务传播机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis"><span class="nav-number">5.</span> <span class="nav-text">Mybatis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mybatis与-与-区别（容易记反）"><span class="nav-number">5.1.</span> <span class="nav-text">Mybatis与$与#区别（容易记反）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中间件应用"><span class="nav-number">6.</span> <span class="nav-text">中间件应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：分库分表"><span class="nav-number">6.1.</span> <span class="nav-text">1：分库分表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：dubbo原理和热部署"><span class="nav-number">6.2.</span> <span class="nav-text">2：dubbo原理和热部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3：zookeeper选举算法及分布式锁实现"><span class="nav-number">6.3.</span> <span class="nav-text">3：zookeeper选举算法及分布式锁实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4：redis数据结构及分布式锁的实现方式"><span class="nav-number">6.4.</span> <span class="nav-text">4：redis数据结构及分布式锁的实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5：mq如何保证不丢失消息"><span class="nav-number">6.5.</span> <span class="nav-text">5：mq如何保证不丢失消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6：更新缓存与db同步"><span class="nav-number">6.6.</span> <span class="nav-text">6：更新缓存与db同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7：Redis与Memcached区别："><span class="nav-number">6.7.</span> <span class="nav-text">7：Redis与Memcached区别：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">7.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离"><span class="nav-number">7.1.</span> <span class="nav-text">mysql不同引擎的区别，数据结构，事务隔离级别以及如何实现隔离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它"><span class="nav-number">7.2.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端："><span class="nav-number">8.</span> <span class="nav-text">前端：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js闭包"><span class="nav-number">8.1.</span> <span class="nav-text">js闭包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开放性问题："><span class="nav-number">9.</span> <span class="nav-text">开放性问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、看了哪些书"><span class="nav-number">9.1.</span> <span class="nav-text">1、看了哪些书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、遇到哪些难题，怎么解决的"><span class="nav-number">9.2.</span> <span class="nav-text">2、遇到哪些难题，怎么解决的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、哪方面你最擅长，讲一下-你有什么优势"><span class="nav-number">9.3.</span> <span class="nav-text">3、哪方面你最擅长，讲一下/你有什么优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐"><span class="nav-number">10.</span> <span class="nav-text">推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐书籍："><span class="nav-number">10.1.</span> <span class="nav-text">推荐书籍：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站及博客"><span class="nav-number">10.2.</span> <span class="nav-text">网站及博客</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lesline</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'uBmzUalK2PlpfScA7lBNdpQq-gzGzoHsz',
+        appKey: 'ynitA1QOEgvjNaEE0FSGdOFg',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
