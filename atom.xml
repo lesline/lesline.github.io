@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-31T02:07:47.923Z</updated>
+  <updated>2018-10-18T15:26:42.758Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>netty</title>
+    <link href="http://yoursite.com/2018/10/18/netty/"/>
+    <id>http://yoursite.com/2018/10/18/netty/</id>
+    <published>2018-10-18T15:25:34.415Z</published>
+    <updated>2018-10-18T15:26:42.758Z</updated>
+    
+    <content type="html"><![CDATA[<p>Netty 是一个异步事件驱动的网络通信层框架，用于快速开发高可用高性能的服务端网络框架与客户端程序，它极大地简化了 TCP 和 UDP 套接字服务器等网络编程。<br><a id="more"></a></p><p>Netty 底层基于 JDK 的 NIO，我们为什么不直接基于 JDK 的 NIO 或者其他NIO框架：<br>1 使用 JDK 自带的 NIO 需要了解太多的概念，编程复杂。<br>2 Netty 底层 IO 模型随意切换，而这一切只需要做微小的改动。<br>3 Netty自带的拆包解包，异常检测等机制让我们从 NIO 的繁重细节中脱离出来，只需关心业务逻辑即可。<br>4 Netty解决了JDK 的很多包括空### 轮询在内的 Bug。<br>5 Netty底层对线程，Selector 做了很多细小的优化，精心设计的 Reactor 线程做到非常高效的并发处理。<br>6 自带各种协议栈，让我们处理任何一种通用协议都几乎不用亲自动手。<br>7 Netty社区活跃，遇到问题随时邮件列表或者 issue。<br>8 Netty已经历各大RPC框架（Dubbo），消息中间件（RocketMQ），大数据通信（Hadoop）框架的广泛的线上验证，健壮性无比强大。</p><h2 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h2><p>IO复用模型：主要使用到了select，poll或epoll，这几个函数也会使进程阻塞，但是和阻塞IO所不同的的，这个函数可以同时阻塞多个IO操作。而且可以同时对多个读操作，多个写操作的IO函数进行检测，直到有数据可读或可写时，才真正调用I/O操作，现在Linux上使用epoll，极大的提升了性到和扩大了单个服务器线程的限制数量。</p><p><img src="https://upload-images.jianshu.io/upload_images/1117220-4967844e12634731.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IO复用模型.png"></p><p>NIO的特点：事件驱动模型、单线程处理多任务、非阻塞I/O，I/O读写不再阻塞，而是返回0、基于block的传输比基于流的传输更高效、更高级的IO函数zero-copy、IO多路复用大大提高了Java网络应用的可伸缩性和实用性。</p><h2 id="netty"><a href="#netty" class="headerlink" title="netty"></a>netty</h2><p>netty实现在原理上没有多大创新，主要是对java nio 做了封装，基于Reactor线程模型进行了实现。大大简化了程序员的编程。</p><p>Reactor线程模型如下：<br><img src="https://upload-images.jianshu.io/upload_images/1117220-a2e632517b9f78b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reactor线程模型.png"></p><p>netty的具体实现：<br><img src="https://upload-images.jianshu.io/upload_images/1117220-9fe7a9c834667ea0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="netty的具体实现.png"></p><h3 id="支持的协议"><a href="#支持的协议" class="headerlink" title="支持的协议"></a>支持的协议</h3><p>HTTP, Web Sockets, SPDY, and RTSP codec等协议，也可以自定议协议。<br>相对Tomcat来说，Tomcat是基于Http协议的，他的实质是一个基于http协议的web容器，但是Netty不一样，他能通过编程自定义各种协议，因为netty能够通过codec自己来编码/解码字节流。<br>netty完全可以替代servlet。</p><h3 id="Reactor的类比"><a href="#Reactor的类比" class="headerlink" title="Reactor的类比"></a>Reactor的类比</h3><p>举一个银行服务的例子：<br>客户操作：1.接待和填表 （连接）2.办理存取（业务处理）<br>一个柜员处理一个人的业务，柜员要等待客户填表，填表时柜员不能做任何事，这就是BIO；<br>如果单独找一个柜员负责招待和让客户填写表格，填好表格的再让其它柜员接待办理业务，节省的人力就很多。这就NIO。</p><p>假设：客户进入门店-&gt;接待-&gt;填表（1分钟）-&gt; 办理存取业务（1分钟）<br>同步：10个柜员一小时能接待30<em>10=300<br>NIO：一个柜员负责接待和填表、其它9个柜员能接待60</em>9=360<br>可以把一个柜员代表一个线程，这样就可以在同等的线程数下拥有更大的负载；<br>其中单独抽出的柜员就是reactor中的acceptor。</p><hr><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href="http://netty.io/wiki/user-guide-for-4.x.html" target="_blank" rel="noopener">Netty.docs: User guide for 4.x</a></p><p>Netty的书籍：<br>《Netty in Action》<br>《Netty权威指南》</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Netty 是一个异步事件驱动的网络通信层框架，用于快速开发高可用高性能的服务端网络框架与客户端程序，它极大地简化了 TCP 和 UDP 套接字服务器等网络编程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="reactor" scheme="http://yoursite.com/categories/reactor/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>html5</title>
